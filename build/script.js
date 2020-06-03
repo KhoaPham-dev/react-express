@@ -25,13 +25,13 @@ fileReader.onloadend = function(){
     var img = document.getElementById('img');
     var demoContainer = document.querySelector('.demo-container');
     tracking.ColorTracker.registerColor('green', function(r, g, b) {
-      if (r >= 229 && r <= 232 && g >= 230 && g <= 234 && b >= 232 && b <= 236) {
+      if (r >= 253 && r <= 255 && g >= 253 && g <= 255 && b >= 253 && b <= 255) {
         return true;
       }
       return false;
     });
     var tracker = new tracking.ColorTracker(['green']);
-    tracker.setMinGroupSize(10);
+    tracker.setMinGroupSize(20);
     tracker.on('track', function(event) {
       console.log(event.data);
       event.data.forEach(function(rect) {
